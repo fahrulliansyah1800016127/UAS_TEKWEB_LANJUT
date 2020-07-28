@@ -1,0 +1,35 @@
+<h3>Add Mobile</h3>
+<form [formGroup]="formAdd" (ngSubmit)="save()">
+  <table>
+    <tr>
+      <td>Name</td>
+      <td>
+        <input type="text" formControlName="name" />
+      </td>
+    </tr>
+    <tr>
+      <td>Price</td>
+      <td>
+        <input type="text" formControlName="price" />
+      </td>
+    </tr>
+    <tr>
+      <td>Status</td>
+      <td>
+        <input type="checkbox" formControlName="status" />
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">Description</td>
+      <td>
+        <textarea cols="20" rows="5" formControlName="description"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">&nbsp;</td>
+      <td>
+        <input type="submit" value="Save" />
+      </td>
+    </tr>
+  </table>
+</form>

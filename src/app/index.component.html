@@ -1,0 +1,26 @@
+<a [routerLink]="['']">Logout</a> |
+<a [routerLink]="['add']">Add</a>
+<h3>Mobile List</h3>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Description</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let mobile of mobiles">
+    <td>{{ mobile.id }}</td>
+    <td>{{ mobile.name }}</td>
+    <td>{{ mobile.price }}</td>
+    <td>{{ mobile.status }}</td>
+    <td>{{ mobile.description }}</td>
+    <td>
+      <button [routerLink]="['edit', { id: mobile.id }]">Edit</button>
+      <button (click)="delete(mobile.id)">Delete</button>
+    </td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>
